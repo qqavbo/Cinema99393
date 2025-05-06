@@ -1,0 +1,274 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{07A3D389-847A-4540-AD51-E3B41820CDBD}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Cinema</RootNamespace>
+    <AssemblyName>Cinema</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.ConfigurationManager, Version=7.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Configuration.ConfigurationManager.7.0.0\lib\net462\System.Configuration.ConfigurationManager.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Security.AccessControl, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.AccessControl.6.0.0\lib\net461\System.Security.AccessControl.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Permissions, Version=7.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Permissions.7.0.0\lib\net462\System.Security.Permissions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Principal.Windows, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Principal.Windows.5.0.0\lib\net461\System.Security.Principal.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin.Designer.cs">
+      <DependentUpon>Admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Buy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Buy.Designer.cs">
+      <DependentUpon>Buy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CinemaDataSet.cs">
+      <DependentUpon>CinemaDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CinemaDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CinemaDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CinemaNewDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CinemaNewDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Day_Seances.cs" />
+    <Compile Include="Email.cs" />
+    <Compile Include="GradienPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Input.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Input.Designer.cs">
+      <DependentUpon>Input.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Registration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registration.Designer.cs">
+      <DependentUpon>Registration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Hall1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Hall1.Designer.cs">
+      <DependentUpon>Hall1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Hall2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Hall2.Designer.cs">
+      <DependentUpon>Hall2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Hall3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Hall3.Designer.cs">
+      <DependentUpon>Hall3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Hall4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Hall4.Designer.cs">
+      <DependentUpon>Hall4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HallVIP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HallVIP.Designer.cs">
+      <DependentUpon>HallVIP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="panel.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Schedule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Schedule.Designer.cs">
+      <DependentUpon>Schedule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Seat.cs" />
+    <Compile Include="Ticket.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ticket.Designer.cs">
+      <DependentUpon>Ticket.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Admin.resx">
+      <DependentUpon>Admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Buy.resx">
+      <DependentUpon>Buy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Input.resx">
+      <DependentUpon>Input.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Registration.resx">
+      <DependentUpon>Registration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Hall1.resx">
+      <DependentUpon>Hall1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Hall2.resx">
+      <DependentUpon>Hall2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Hall3.resx">
+      <DependentUpon>Hall3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Hall4.resx">
+      <DependentUpon>Hall4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HallVIP.resx">
+      <DependentUpon>HallVIP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Schedule.resx">
+      <DependentUpon>Schedule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ticket.resx">
+      <DependentUpon>Ticket.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="CinemaDataSet.xsc">
+      <DependentUpon>CinemaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="CinemaDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CinemaDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CinemaDataSet.xss">
+      <DependentUpon>CinemaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="CinemaNewDataSet.xsc">
+      <DependentUpon>CinemaNewDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="CinemaNewDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CinemaNewDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CinemaNewDataSet.xss">
+      <DependentUpon>CinemaNewDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Word">
+      <Guid>{00020905-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>8</VersionMajor>
+      <VersionMinor>7</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1619710195_7-phonoteka_org-p-kosmos-dlya-detei-bez-fona-9.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngwing.com %286%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngwing.com %287%29.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
